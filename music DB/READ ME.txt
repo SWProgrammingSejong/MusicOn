@@ -1,0 +1,21 @@
+MySQl password : 1234
+
+<Standard Table Create>
+create table music(
+
+id INT NOT NULL auto_increment PRIMARY KEY,
+
+music_name varchar(100) NOT NULL,
+
+music_genre varchar(10) NOT NULL,
+
+music_style varchar(20) NOT NULL,
+
+music_team varchar(20) NOT NULL,
+
+music_year year NOT NULL
+
+);
+
+
+***주기적으로 엑셀 파일 갱신 요망***
