@@ -1,3 +1,23 @@
+MySQl password : 1234
+
+<Standard Table Create>
+create table music(
+
+id INT(11) NOT NULL AUTO_CREATE PRIMARY KEY,
+
+music_name varchar(20) NOT NULL,
+
+music_genre varchar(10) NOT NULL,
+
+music_style varchar(20) NOT NULL,
+
+music_team varchar(20) NOT NULL,
+
+music_year year NOT NULL
+
+);
+
+
 <스타일>
 잔잔한 노래
 신나는 노래
