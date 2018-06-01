@@ -3,9 +3,9 @@ MySQl password : 1234
 <Standard Table Create>
 create table music(
 
-id INT(11) NOT NULL AUTO_CREATE PRIMARY KEY,
+id INT NOT NULL auto_increment PRIMARY KEY,
 
-music_name varchar(20) NOT NULL,
+music_name varchar(100) NOT NULL,
 
 music_genre varchar(10) NOT NULL,
 
