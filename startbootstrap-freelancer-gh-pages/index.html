@@ -62,8 +62,22 @@
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Menu</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">문제를 풀어보세요.</h2>
         <hr class="star-dark mb-5">
+        <h2 class="text-center text-uppercase text-secondary mb-5">1. 곡의 장르는 무엇입니까?</h2>
+            <h1 class="text-center text-secondary mb-0">
+              <input type="radio" name="genre" value="락" style="width:30px;height:30px;"> 락
+              <input type="radio" name="genre" value="재즈" style="width:30px;height:30px;"> 재즈
+              <input type="radio" name="genre" value="가요" style="width:30px;height:30px;"> 가요
+              <input type="radio" name="genre" value="클래식" style="width:30px;height:30px;"> 클래식
+              <input type="radio" name="genre" value="팝" style="width:30px;height:30px;"> 팝
+              <input type="radio" name="genre" value="잘 모르겠습니다" style="width:30px;height:30px;"> 모르겠습니다
+           </h1 >
+
+        <div class="text-center text-uppercser text-secondary mb-2">
+                <input type="button" value="확인" onClick=selCheck() size="100px;">
+        </div>
+
         <div class="row">
           <div class="col-md-6 col-lg-4">
             <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">

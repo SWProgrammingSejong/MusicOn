@@ -378,3 +378,32 @@ a:focus, a:hover, a:active {
   background-color: #1a252f;
   border-color: #1a252f;
 }
+
+.radioBox input[type=radio]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 15px;
+}
+
+
+/*
+input[type=radio]:not(old) {
+    margin:0; padding:0; opacity:0;
+    background:url(/images/check_on.png) no-repeat 0 0;
+    width:0;
+}
+input[type=radio]:not(old) + label {
+    display: inline-block;
+    text-align: left; height:20px; padding-left: 25px;
+    background: url(/images/check_off_2.png) no-repeat 0 0;
+    line-height: 130%; vertical-align: top;
+}
+input[type=radio]:not(old):checked + label {
+    background: url(/images/check_on_2.png) no-repeat 0 0;
+}
+
+*/
