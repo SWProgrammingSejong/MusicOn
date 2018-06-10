@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music On</title>
+</head>
+<body>
+<h1>원하는 음악을 찾아보세요!</h1>
+<div>
+	<form action="get" method="post">
+		<fieldset class="MusicRegion">
+			<legend class="SearchTitle">어떤 지역의 음악입니까?</legend>
+			<hr class="mhr">
+			<input type="radio" name="question-1" value="US">북미<br/>
+			<input type="radio" name="question-1" value="EU">유럽<br/>
+			<input type="radio" name="question-1" value="JP">일본<br/>
+			<input type="radio" name="question-1" value="CN">중국<br/>
+			<input type="radio" name="question-1" value="KR">한국<br/>
+		</fieldset>
+		<fieldset class="MusicGenre">
+			<legend class="SearchTitle">어떤 장르의 음악입니까?</legend>
+			<hr class="mhr">
+			<input type="radio" name="question-2" value="POP">팝<br/>
+			<input type="radio" name="question-2" value="Classic">클래식<br/>
+			<input type="radio" name="question-2" value="Dance">댄스<br/>
+			<input type="radio" name="question-2" value="Hiphop">힙합<br/>
+			<input type="radio" name="question-2" value="Electronic">일렉트로닉<br/>
+		</fieldset>
+		<fieldset class="MusicType">	
+			<legend class="SearchTitle">보컬의 성별 또는 연주되는 악기는 무엇입니까?</legend>
+			<hr class="mhr">
+			<input type="radio" name="question-3" value="Male">남성<br/>
+			<input type="radio" name="question-3" value="Female">여성<br/>
+			<input type="radio" name="question-3" value="Duet">혼성<br/>
+			<input type="radio" name="question-3" value="Classic">클래식(현악/관악)<br/>
+			<input type="radio" name="question-3" value="Electronic">일렉트로닉<br/>
+		</fieldset>
+		<fieldset class="MusicStyle">	
+			<legend class="SearchTitle">음악의 분위기는 어떻습니까?</legend>
+			<hr class="mhr">
+			<input type="radio" name="question-4" value="Calm">잔잔함<br/>
+			<input type="radio" name="question-4" value="Lyrical">서정적<br/>
+			<input type="radio" name="question-4" value="Dreamy">몽환적<br/>
+			<input type="radio" name="question-4" value="Sorrow">슬픔<br/>
+			<input type="radio" name="question-4" value="Cheerful">신남<br/>
+		</fieldset>
+		<button type="button" id="savechecklist">확인</button>
+	</form>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$('#savechecklist').click(function() {
+	    var the_value;
+	    //the_value = jQuery('input:radio:checked').val();
+	    //the_value = jQuery('input[name=macro]:radio:checked').val();
+	    the_value = getChecklistItems();
+	    alert(the_value);
+	});
+
+	function getChecklistItems() {
+	    var result = 
+	        $("input:radio:checked").get();
+	    
+	    var columns = $.map(result, function(element) {
+	        return $(element).attr("value");
+	    });
+
+	    return columns.join("|");
+	}
+</script>
+</body>
+</html>
